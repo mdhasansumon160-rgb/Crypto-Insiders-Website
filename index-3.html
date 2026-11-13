@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090909">
+  <meta name="description" content="Crypto Insiders — Binance spot ও futures trading education, market analysis, technical insights এবং crypto updates.">
+  <title>Crypto Insiders | Trade Smarter</title>
+  <style>
+    :root{--bg:#080909;--panel:#121313;--panel2:#171817;--gold:#d8ad55;--gold2:#f2d38b;--muted:#b8b8b1;--white:#f8f6ef;--line:rgba(216,173,85,.22)}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:radial-gradient(ellipse at 75% -10%,rgba(216,173,85,.13),transparent 38%),var(--bg);color:var(--white);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;line-height:1.65}
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(1120px,calc(100% - 40px));margin:auto}
+    header{position:sticky;top:0;z-index:10;background:rgba(8,9,9,.88);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.07)}
+    nav{height:74px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:11px;font-weight:850;letter-spacing:1.4px}
+    .brand-mark{width:38px;height:38px;border:1px solid var(--gold);border-radius:12px;display:grid;place-items:center;color:var(--gold);font-size:20px;background:linear-gradient(145deg,#292114,#111)}
+    .brand span:last-child{font-size:15px}
+    .navlinks{display:flex;align-items:center;gap:25px;color:#d4d0c5;font-size:13px}
+    .navlinks a:hover{color:var(--gold2)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:10px;padding:13px 19px;font-weight:800;font-size:14px;transition:.2s;border:1px solid var(--gold);background:linear-gradient(135deg,var(--gold2),var(--gold));color:#17130a;box-shadow:0 8px 28px rgba(216,173,85,.13)}
+    .btn:hover{transform:translateY(-2px);filter:brightness(1.07)}
+    .btn.outline{background:transparent;color:var(--gold2);box-shadow:none}
+    .hero{padding:94px 0 78px;position:relative;overflow:hidden}
+    .hero:after{content:"₿";position:absolute;right:4%;top:45px;font-size:340px;line-height:1;color:rgba(216,173,85,.035);font-weight:900;pointer-events:none}
+    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:54px;align-items:center;position:relative;z-index:1}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--gold2);font-size:11px;font-weight:850;letter-spacing:2.2px;text-transform:uppercase;border:1px solid var(--line);border-radius:30px;padding:8px 13px;background:rgba(216,173,85,.06)}
+    .dot{width:7px;height:7px;border-radius:50%;background:#75c78a;box-shadow:0 0 12px #75c78a}
+    h1{font-size:clamp(42px,6.2vw,76px);line-height:1.04;letter-spacing:-2.8px;margin:23px 0 19px;font-weight:900}
+    h1 em{font-style:normal;color:var(--gold2)}
+    .lead{max-width:600px;color:#c3c1b9;font-size:17px;margin:0 0 29px}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:13px}
+    .micro{font-size:11px;color:#88877f;margin-top:19px}
+    .visual{border:1px solid var(--line);border-radius:23px;padding:23px;background:linear-gradient(145deg,rgba(35,30,20,.95),rgba(17,18,17,.96));box-shadow:0 25px 80px rgba(0,0,0,.35);position:relative}
+    .visual-top{display:flex;justify-content:space-between;align-items:center;color:#b9b5a9;font-size:12px;margin-bottom:20px}
+    .live{color:#8ed7a0;font-size:11px}
+    .chart{height:185px;display:flex;align-items:end;gap:8px;padding:12px 5px 0;border-bottom:1px solid rgba(255,255,255,.12);background:repeating-linear-gradient(to bottom,transparent 0,transparent 44px,rgba(255,255,255,.055) 45px)}
+    .bar{flex:1;border-radius:5px 5px 0 0;background:linear-gradient(180deg,#e9c875,#8c6424);opacity:.9}
+    .bar:nth-child(3n){background:linear-gradient(180deg,#7cc89a,#286b4b)}
+    .chart-labels{display:flex;justify-content:space-between;color:#77776f;font-size:10px;padding-top:9px}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:20px}
+    .stat{background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:12px}
+    .stat b{display:block;color:var(--gold2);font-size:17px}
+    .stat span{font-size:10px;color:#9d9b92}
+    section{padding:76px 0}
+    .section-head{text-align:center;max-width:650px;margin:0 auto 38px}
+    .kicker{color:var(--gold);font-size:11px;font-weight:850;letter-spacing:2px;text-transform:uppercase}
+    h2{font-size:clamp(29px,4vw,43px);line-height:1.15;margin:10px 0 12px;letter-spacing:-1px}
+    .section-head p{color:var(--muted);margin:0}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .card{background:linear-gradient(145deg,var(--panel2),var(--panel));border:1px solid rgba(255,255,255,.075);border-radius:17px;padding:24px;min-height:205px}
+    .icon{width:43px;height:43px;border-radius:13px;display:grid;place-items:center;background:rgba(216,173,85,.11);border:1px solid var(--line);font-size:20px;margin-bottom:17px}
+    .card h3{margin:0 0 8px;font-size:17px}
+    .card p{margin:0;color:#aaa99f;font-size:13px}
+    .about{background:linear-gradient(180deg,transparent,rgba(216,173,85,.035),transparent)}
+    .about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:45px;align-items:center}
+    .about-box{border:1px solid var(--line);border-radius:20px;padding:28px;background:linear-gradient(145deg,#1c1912,#101111)}
+    .about-box .big{font-size:42px;color:var(--gold2);font-weight:900;line-height:1}
+    .about-box p{color:#b8b5aa;font-size:13px}
+    .checks{list-style:none;padding:0;margin:22px 0 0}
+    .checks li{padding:9px 0;color:#d2d0c7;font-size:14px;border-bottom:1px solid rgba(255,255,255,.06)}
+    .checks li:before{content:"✓";color:var(--gold2);font-weight:900;margin-right:11px}
+    .vip{border:1px solid var(--line);border-radius:22px;padding:34px;background:radial-gradient(ellipse at 100% 0,rgba(216,173,85,.14),transparent 48%),#111313;display:flex;justify-content:space-between;align-items:center;gap:25px}
+    .vip p{color:#b7b5ac;margin:7px 0 0;max-width:650px;font-size:14px}
+    .faq{max-width:780px;margin:auto}
+    details{border-bottom:1px solid rgba(255,255,255,.1);padding:17px 3px}
+    summary{cursor:pointer;font-weight:750;color:#e9e5d9}
+    details p{color:#aaa99f;font-size:13px;margin-bottom:0}
+    .cta{text-align:center;padding:60px 25px;border:1px solid var(--line);border-radius:22px;background:radial-gradient(ellipse at center,rgba(216,173,85,.12),transparent 65%),#111313}
+    .cta p{color:#b8b5aa;margin:0 auto 24px;max-width:590px}
+    footer{padding:30px 0;border-top:1px solid rgba(255,255,255,.08);color:#89877f;font-size:11px}
+    .foot{display:flex;justify-content:space-between;gap:20px;align-items:center}
+    .risk{max-width:760px;margin-top:12px;color:#77766f}
+    @media(max-width:800px){.navlinks{display:none}.hero{padding:68px 0 55px}.hero-grid,.about-grid{grid-template-columns:1fr;gap:30px}.hero:after{font-size:220px;right:-10%;top:80px}.cards{grid-template-columns:1fr 1fr}.vip{align-items:flex-start;flex-direction:column}}
+    @media(max-width:520px){.wrap{width:min(100% - 28px,1120px)}nav{height:65px}.brand span:last-child{font-size:13px}.hero{padding-top:54px}h1{letter-spacing:-1.8px}.lead{font-size:15px}.cards{grid-template-columns:1fr}.visual{padding:16px}.stats{gap:6px}.stat{padding:9px}.stat b{font-size:14px}.foot{align-items:flex-start;flex-direction:column}section{padding:58px 0}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <nav>
+      <a class="brand" href="#home" aria-label="Crypto Insiders home"><span class="brand-mark">₿</span><span>CRYPTO INSIDERS</span></a>
+      <div class="navlinks"><a href="#features">আমাদের সেবা</a><a href="#about">আমাদের সম্পর্কে</a><a href="#vip">VIP</a><a href="#faq">FAQ</a></div>
+      <a class="btn" href="https://t.me/cryptoinsider71" target="_blank" rel="noopener">Join Telegram ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow"><span class="dot"></span> TRADING COMMUNITY</div>
+        <h1>Trade Smarter.<br><em>Learn Better.</em></h1>
+        <p class="lead">ক্রিপ্টো মার্কেট বুঝতে, টেকনিক্যাল অ্যানালাইসিস শিখতে এবং নিয়মিত মার্কেট আপডেট পেতে যুক্ত হোন Crypto Insiders কমিউনিটিতে।</p>
+        <div class="hero-actions">
+          <a class="btn" href="https://t.me/cryptoinsider71" target="_blank" rel="noopener">🚀 পাবলিক গ্রুপে জয়েন করুন</a>
+          <a class="btn outline" href="#features">আরও জানুন</a>
+        </div>
+        <div class="micro">BINANCE SPOT & FUTURES · MARKET INSIGHTS · TRADING EDUCATION</div>
+      </div>
+      <div class="visual" aria-label="Decorative market chart">
+        <div class="visual-top"><span>MARKET INSIGHT / SAMPLE</span><span class="live">● LIVE-STYLE PREVIEW</span></div>
+        <div class="chart">
+          <div class="bar" style="height:35%"></div><div class="bar" style="height:48%"></div><div class="bar" style="height:42%"></div><div class="bar" style="height:61%"></div><div class="bar" style="height:54%"></div><div class="bar" style="height:69%"></div><div class="bar" style="height:63%"></div><div class="bar" style="height:79%"></div><div class="bar" style="height:72%"></div><div class="bar" style="height:91%"></div><div class="bar" style="height:82%"></div><div class="bar" style="height:98%"></div>
+        </div>
+        <div class="chart-labels"><span>MARKET STRUCTURE</span><span>TECHNICAL VIEW</span><span>RISK FIRST</span></div>
+        <div class="stats">
+          <div class="stat"><b>BTC</b><span>Market analysis</span></div>
+          <div class="stat"><b>ETH</b><span>Coin insights</span></div>
+          <div class="stat"><b>24/7</b><span>Community updates</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="features">
+    <div class="wrap">
+      <div class="section-head"><div class="kicker">WHAT YOU GET</div><h2>এক জায়গায় ট্রেডিং আপডেট</h2><p>শেখা, বিশ্লেষণ ও কমিউনিটি—আপনার ট্রেডিং জার্নির জন্য প্রয়োজনীয় তথ্য একসঙ্গে।</p></div>
+      <div class="cards">
+        <article class="card"><div class="icon">📊</div><h3>দৈনিক মার্কেট অ্যানালাইসিস</h3><p>BTC, ETH এবং নির্বাচিত কয়েনের মার্কেট স্ট্রাকচার ও গুরুত্বপূর্ণ লেভেল নিয়ে আলোচনা।</p></article>
+        <article class="card"><div class="icon">📈</div><h3>ট্রেডিং সিগন্যাল ও আপডেট</h3><p>সেটআপের সম্ভাব্য এন্ট্রি, টার্গেট ও ঝুঁকি ব্যবস্থাপনা সম্পর্কে শিক্ষামূলক তথ্য।</p></article>
+        <article class="card"><div class="icon">🎯</div><h3>টেকনিক্যাল অ্যানালাইসিস</h3><p>সাপোর্ট, রেজিস্ট্যান্স, ট্রেন্ড ও মার্কেট স্ট্রাকচার বুঝতে সহায়ক কনটেন্ট।</p></article>
+        <article class="card"><div class="icon">💹</div><h3>Binance Spot & Futures</h3><p>স্পট ও ফিউচার মার্কেটের মৌলিক ধারণা এবং ট্রেডিং-সম্পর্কিত আপডেট।</p></article>
+        <article class="card"><div class="icon">🧠</div><h3>স্মার্ট ট্রেডিং কৌশল</h3><p>পরিকল্পনা, ধৈর্য, পজিশন সাইজিং এবং ঝুঁকি নিয়ন্ত্রণের গুরুত্ব।</p></article>
+        <article class="card"><div class="icon">👥</div><h3>ট্রেডার কমিউনিটি</h3><p>অন্যান্য সদস্যদের সঙ্গে মার্কেট নিয়ে আলোচনা ও শেখার সুযোগ।</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="wrap about-grid">
+      <div>
+        <div class="kicker">ABOUT CRYPTO INSIDERS</div>
+        <h2>জ্ঞান দিয়ে শুরু হোক আপনার ট্রেডিং জার্নি</h2>
+        <p style="color:#b8b5aa">Crypto Insiders একটি ট্রেডিং-কেন্দ্রিক কমিউনিটি। এখানে আমরা মার্কেট অ্যানালাইসিস, টেকনিক্যাল ধারণা এবং ক্রিপ্টো আপডেট শেয়ার করি।</p>
+        <ul class="checks"><li>নিয়মিত মার্কেট পর্যবেক্ষণ</li><li>শিক্ষামূলক বিশ্লেষণ ও আপডেট</li><li>ঝুঁকি ব্যবস্থাপনার ওপর গুরুত্ব</li><li>কমিউনিটির সঙ্গে শেখার সুযোগ</li></ul>
+      </div>
+      <div class="about-box"><div class="big">01 / 03</div><h3 style="font-size:23px;margin:14px 0 4px">প্রথমে শিখুন, তারপর সিদ্ধান্ত নিন</h3><p>কোনো সিগন্যাল বা বিশ্লেষণ নিশ্চিত লাভের নিশ্চয়তা দেয় না। নিজের গবেষণা ও ঝুঁকি বিবেচনা করে সিদ্ধান্ত নিন।</p><a class="btn outline" href="https://t.me/cryptoinsider71" target="_blank" rel="noopener">কমিউনিটিতে যুক্ত হোন ↗</a></div>
+    </div>
+  </section>
+
+  <section id="vip">
+    <div class="wrap">
+      <div class="vip">
+        <div><div class="kicker">EXCLUSIVE COMMUNITY</div><h2 style="margin-bottom:4px">VIP Membership</h2><p>VIP মেম্বারশিপ, সুবিধা ও বর্তমান প্যাকেজ সম্পর্কে বিস্তারিত জানতে অ্যাডমিনের সঙ্গে যোগাযোগ করুন। যোগদানের আগে শর্তাবলি ও ঝুঁকি বুঝে নিন।</p></div>
+        <a class="btn" href="https://t.me/CryptoInsidersAdmin" target="_blank" rel="noopener">👑 অ্যাডমিনের সঙ্গে যোগাযোগ</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <div class="section-head"><div class="kicker">HELP CENTER</div><h2>সাধারণ কিছু প্রশ্ন</h2></div>
+      <div class="faq">
+        <details><summary>Crypto Insiders-এ কী ধরনের কনটেন্ট পাওয়া যাবে?</summary><p>মার্কেট অ্যানালাইসিস, টেকনিক্যাল আলোচনা, ক্রিপ্টো আপডেট এবং ট্রেডিং শিক্ষা-সম্পর্কিত কনটেন্ট।</p></details>
+        <details><summary>পাবলিক গ্রুপে কীভাবে জয়েন করব?</summary><p>এই ওয়েবসাইটের “পাবলিক গ্রুপে জয়েন করুন” বাটনে চাপ দিলে Telegram গ্রুপে যেতে পারবেন।</p></details>
+        <details><summary>ট্রেডিং সিগন্যাল কি নিশ্চিত লাভ দেয়?</summary><p>না। কোনো সিগন্যাল বা বিশ্লেষণ লাভের নিশ্চয়তা দেয় না। ক্রিপ্টো ট্রেডিংয়ে মূলধন হারানোর ঝুঁকি রয়েছে।</p></details>
+        <details><summary>VIP মেম্বারশিপ সম্পর্কে কোথায় জানব?</summary><p>VIP সংক্রান্ত তথ্যের জন্য Telegram-এ @CryptoInsidersAdmin-এর সঙ্গে যোগাযোগ করুন।</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="cta"><div class="kicker">JOIN THE COMMUNITY</div><h2>আপনার ট্রেডিং জার্নি শুরু করুন</h2><p>মার্কেট আপডেট, বিশ্লেষণ ও শিক্ষামূলক আলোচনার জন্য আজই Crypto Insiders Public Group-এ যুক্ত হোন।</p><a class="btn" href="https://t.me/cryptoinsider71" target="_blank" rel="noopener">🚀 JOIN PUBLIC TELEGRAM GROUP</a></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot"><div><strong style="color:#d8ad55;letter-spacing:1px">CRYPTO INSIDERS</strong><div>© 2026 Crypto Insiders. All rights reserved.</div></div><div>Admin: <a href="https://t.me/CryptoInsidersAdmin" target="_blank" rel="noopener" style="color:#e6c77f">@CryptoInsidersAdmin</a></div></div>
+    <p class="risk">Risk Disclaimer: এই ওয়েবসাইটের তথ্য শুধুমাত্র শিক্ষামূলক ও তথ্যগত উদ্দেশ্যে। এটি আর্থিক পরামর্শ, বিনিয়োগের সুপারিশ বা লাভের নিশ্চয়তা নয়। ক্রিপ্টোকারেন্সি ও ফিউচার ট্রেডিং উচ্চ ঝুঁকিপূর্ণ; নিজের গবেষণা করুন এবং হারানোর সামর্থ্য নেই এমন অর্থ ঝুঁকিতে ফেলবেন না।</p>
+  </div>
+</footer>
+</body>
+</html>
